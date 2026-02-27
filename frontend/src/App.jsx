@@ -1,9 +1,11 @@
 import './App.css'
+import Register from './Register'
 
 function App() {
     return (
-    <div className='text-red-500'>
-      hello world
+    <div className=''>
+      <p>hello</p>
+      <Register/>
     </div>
   )
 }
