@@ -1,0 +1,11 @@
+const express=require('express')
+const dotenv=require('dotenv')
+const router=require('./routes/userRoutes')
+const connectdb=require('./connections/db')
+dotenv.config()
+const port=process.env.PORT
+const app=express()
+app.use(express.json())
+connectdb()
+app.use('/api',router)
+app.listen(port,()=>{console.log(`server is running on port http://localhost:${port}`)})

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 import { useForm } from "react-hook-form"
 import regSchema from './Zod/zod'
 import {zodResolver} from "@hookform/resolvers/zod"
@@ -8,7 +8,6 @@ const Register = () => {
 // storing all sort of RHF
     const {register,
         handleSubmit,
-        watch,
         formState:{errors}
         }=useForm({
           resolver:zodResolver(regSchema)
@@ -51,7 +50,7 @@ return (
         <input type="text" {...register("adhar")} className={inputstyl}/>
         {errors.adhar && <p>{errors.adhar.message}</p>}
         </div>
-        <button>submit</button>
+        <button className="bg-[#3498DB] w-textwrap">submit</button>
       </form>
     </div>
   )
